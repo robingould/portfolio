@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3d app</title>
+  </head>
+  <body>
+    <div class="experience">
+      <canvas class="experience-canvas"></canvas>
+    </div>
+
+    <div class="page" asscroll-container>
+      <div class="page-wrapper" asscroll>
+
+        <section class="hero">
+          <div class="hero-wrapper">
+
+            <div class="hero-main">
+              <h1 class="hero-main-title">\\plantfriend</h1>
+              <p class="hero-main-description">\\compsci_student | (temp website lolol a)</p>
+            </div>
+
+            <div class="hero-second">
+              <p class="hero-second-subheading">\\robin</h1>
+              <p class="hero-second-subheading">\\portfolio</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="first-move section-margin"></div>
+
+        <section class="first-section section left">
+          <div class="section-intro-wrapper">
+            <h1 class="section-title">
+              <span class="section-title-text">\\about me</span>
+            </h1>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <h3 class="section-heading">Classic...forgot to write any thing..</h3>
+            <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consequatur fugiat soluta deleniti? Aperiam earum repellat, eos necessitatibus rem quas modi! Minima tempora aperiam natus quos alias atque, optio cumque!</p>
+            <h3 class="section-heading">Classic...forgot to write any thing..</h3>
+            <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consequatur fugiat soluta deleniti? Aperiam earum repellat, eos necessitatibus rem quas modi! Minima tempora aperiam natus quos alias atque, optio cumque!</p>
+            <h3 class="section-heading">Classic...forgot to write any thing..</h3>
+            <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consequatur fugiat soluta deleniti? Aperiam earum repellat, eos necessitatibus rem quas modi! Minima tempora aperiam natus quos alias atque, optio cumque!</p>
+          </div>
+        </section>
+
+        <div class="second-move section-margin"></div>
+
+        <section class="second-section section right">
+          <div class="section-intro-wrapper">
+            <h1 class="section-title">
+              <span class="section-title-text">\\projects</span>
+              <div class="section-title-decoration styleOne"></div>
+              <div class="section-title-decoration styleTwo"></div>
+              <div class="section-title-decoration styleThree"></div>
+            </h1>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <h3 class="section-heading">Classic...forgot to write any thing..</h3>
+            <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consequatur fugiat soluta deleniti? Aperiam earum repellat, eos necessitatibus rem quas modi! Minima tempora aperiam natus quos alias atque, optio cumque!</p>
+            <h3 class="section-heading">Classic...forgot to write any thing..</h3>
+            <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consequatur fugiat soluta deleniti? Aperiam earum repellat, eos necessitatibus rem quas modi! Minima tempora aperiam natus quos alias atque, optio cumque!</p>
+            <h3 class="section-heading">Classic...forgot to write any thing..</h3>
+            <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consequatur fugiat soluta deleniti? Aperiam earum repellat, eos necessitatibus rem quas modi! Minima tempora aperiam natus quos alias atque, optio cumque!</p>
+          </div>
+        </section>
+
+        <div class="third-move section-margin"></div>
+
+        <section class="third-section section left">
+          <div class="section-intro-wrapper">
+            <h1 class="section-title">
+              <span class="section-title-text">\\contact me</span>
+              <div class="section-title-decoration styleOne"></div>
+              <div class="section-title-decoration styleTwo"></div>
+              <div class="section-title-decoration styleThree"></div>
+            </h1>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <h3 class="section-heading">Classic...forgot to write any thing..</h3>
+            <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consequatur fugiat soluta deleniti? Aperiam earum repellat, eos necessitatibus rem quas modi! Minima tempora aperiam natus quos alias atque, optio cumque!</p>
+            <h3 class="section-heading">Classic...forgot to write any thing..</h3>
+            <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consequatur fugiat soluta deleniti? Aperiam earum repellat, eos necessitatibus rem quas modi! Minima tempora aperiam natus quos alias atque, optio cumque!</p>
+            <h3 class="section-heading">Classic...forgot to write any thing..</h3>
+            <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consequatur fugiat soluta deleniti? Aperiam earum repellat, eos necessitatibus rem quas modi! Minima tempora aperiam natus quos alias atque, optio cumque!</p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    
+
+    <script id="vertexShader" type="x-shader/x-vertex">
+      varying vec2 vUv;
+      void main() {
+        vUv = uv;
+        gl_Position = projectionMatrix 
+          * modelViewMatrix 
+          * vec4( position, 1.0 );
+      }
+    </script>
+    
+    <script id="fragmentShader" type="x-shader/x-fragment">
+      uniform float amount;
+      uniform sampler2D tDiffuse;
+      varying vec2 vUv;
+    
+      float random( vec2 p )
+      {
+        vec2 K1 = vec2(
+          23.14069263277926, 
+          2.665144142690225 
+        );
+        return fract( cos( dot(p,K1) ) * 12345.6789 );
+      }
+    
+      void main() {
+    
+        vec4 color = texture2D( tDiffuse, vUv );
+        vec2 uvRandom = vUv;
+        uvRandom.y *= random(vec2(uvRandom.y,amount));
+        color.rgb += random(uvRandom)*0.10;
+        gl_FragColor = vec4( color  );
+      }
+    </script>
+    
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

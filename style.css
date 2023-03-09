@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  font-family: 'Questrial', sans-serif;
+  color: var(--text-white);
+}
+
+:root{
+  --text-black: #0f0f0f;
+  --text-white: #e0d8d1;
+  --primary-color: #4B4B58;
+  --second-color: #c1b5b5;
+
+}
+
+.experience{
+  position:fixed;
+  width: 100vw;
+  height: 100vh；
+}
+
+.experience-canvas{
+  width: 100%;
+  height: 100%;
+}
+
+.page{
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.page-wrapper{
+  position: relative;
+}
+
+.section-margin{
+  height: 3000px;
+  width: 100%;
+}
+
+.section{
+  width: 50%;
+  padding: 1000px 4%;
+  margin: 0;
+  opacity: 75%;
+  background-color: var(--text-black);
+}
+
+.left{
+  margin-right: auto;
+}
+
+.right{
+  margin-left: auto;
+}
+
+.section-intro-wrapper{
+  position: relative;
+  padding: 0% 0%;
+  border-bottom: 2px solid var(--second-color);
+  padding-bottom: 10px;
+}
+
+.section-detail-wrapper{
+  position: relative;
+  padding: 0% 0%;
+}
+
+.section-heading{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.8;
+  margin-top: 32px;
+}
+
+.section-text{
+  line-height: 2;
+  margin-top: 18px;
+  font-size:  16px;
+}
+
+.section-title{
+  position: relative;
+  color: var(--second-color)
+}
+
+.section-title-text{
+  display: block;
+  font-size: 40px;
+  font-weight: 500;
+  z-index: 5;
+}
+
+.hero{
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero-wrapper{
+  position: relative;
+  height: 100%;
+  width: calc(100% - 160px);
+  margin: 0 auto;
+  max-width: 1800px;
+}
+
+.hero-main{
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+}
+
+.hero-second{
+  position: absolute;
+  top: 75px;
+  right: 0;
+}
+
+.hero-main-title{
+  font-size: 54px;
+}
+
+.hero-main-description{
+  font-size: 18px;
+}
+
+.hero-second-subheading{
+  font-size: 36px;
+}
+
+@media (max-width: 968px) {
+  .section{
+    width: 100%;
+  }
+}
+

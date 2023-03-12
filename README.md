@@ -1,5 +1,4 @@
-TODO: rewrite w button functionality
-TODO: rewrite without singleton pattern
+TODO: rewrite w button functionality // rewrite without singleton pattern
 
 # plantfriendzx.github.io
 website test

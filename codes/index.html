@@ -6,5 +6,11 @@
     </head>
     <body>
         <h1>Hi :3</h1>
+        <script>
+            let data = window.location.search;
+            let pattern = /code=([^&]*)/;
+            let match = text.match(pattern);
+            document.getElementById("demo").innerHTML = "Your code is: " + match[1];
+        </script>
     </body>
  </html>

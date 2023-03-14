@@ -10,7 +10,7 @@
         <script>
             let data = window.location.search;
             let pattern = /code=([^&]*)/;
-            let match = text.match(pattern);
+            let match = data.match(pattern);
             document.getElementById("match-test").innerHTML = "Your code is: " + match[1];
         </script>
     </body>

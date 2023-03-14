@@ -6,12 +6,12 @@
     </head>
     <body>
         <h1>Hi :3</h1>
-        <p id="code"></p>
+        <p id="match-test"></p>
         <script>
             let data = window.location.search;
             let pattern = /code=([^&]*)/;
             let match = text.match(pattern);
-            document.getElementById("code").innerHTML = "Your code is: " + match[1];
+            document.getElementById("match-test").innerHTML = "Your code is: " + match[1];
         </script>
     </body>
  </html>

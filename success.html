@@ -19,8 +19,6 @@
 
         const token = matchToken ? matchToken[0] : '';
 
-        const accessTokenElement = document.getElementById('access_token');
-        accessTokenElement.textContent = token;
         // url to GET channel_ID
         const url = 'https://api.twitch.tv/helix/users';
 
@@ -35,7 +33,7 @@
             .then(data => {
                 const channelID = data.data[0].id;
                 document.getElementById('channel').textContent = 'Channel ID: ' + channelID;
-                document.getElementById('access_token').textContent = 'Access Token: ' + accessToken;
+                document.getElementById('access_token').textContent = 'Access Token: ' + token;
             })
             .catch(error => {
                 console.error('Error:', error);

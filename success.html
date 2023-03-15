@@ -12,7 +12,9 @@
         // get access token from URL <p id="channel"></p>
         const urlParams = new URLSearchParams(window.location.search);
         const accessToken = urlParams.get('access_token');
-
+        
+        const accessTokenElement = document.getElementById('access_token');
+        accessTokenElement.textContent = accessToken;
         // url to GET channel_ID
         const url = 'https://api.twitch.tv/helix/users';
 

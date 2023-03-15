@@ -5,11 +5,11 @@
     <title>WE DID IT YAY OMG !! 0.0</title>
 </head>
 <body>
-    <p id="channel"></p>
+    
     <p id="access_token"></p>
 
     <script>
-        // get access token from URL
+        // get access token from URL <p id="channel"></p>
         const urlParams = new URLSearchParams(window.location.search);
         const accessToken = urlParams.get('access_token');
 
@@ -17,23 +17,23 @@
         const url = 'https://api.twitch.tv/helix/users';
 
         //headers
-        const headers = {
-            'Client-ID': '8khtls8dc9mor80o1sp0wlx5bofig9',
-            'Authorization': 'Bearer ' + accessToken
-        };
+        //const headers = {
+        //    'Client-ID': '8khtls8dc9mor80o1sp0wlx5bofig9',
+        //    'Authorization': 'Bearer ' + accessToken
+        //};
 
-        fetch(url, {
-            headers: headers
-        })
-            .then(response => response.json())
-            .then(data => {
-                const channelID = data.data[0].id;
-                document.getElementById('channel').textContent = 'Channel ID: ' + channelID;
-                document.getElementById('access_token').textContent = 'Access Token: ' + accessToken;
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+        //fetch(url, {
+        //    headers: headers
+        //})
+        //    .then(response => response.json())
+        //    .then(data => {
+        //        const channelID = data.data[0].id;
+        //        document.getElementById('channel').textContent = 'Channel ID: ' + channelID;
+        //        document.getElementById('access_token').textContent = 'Access Token: ' + accessToken;
+        //    })
+        //    .catch(error => {
+        //        console.error('Error:', error);
+        //    });
     </script>
 </body>
 </html>

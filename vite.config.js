@@ -8,7 +8,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         codes: resolve(__dirname, 'codes/index.html'),
-        success: resolve(__dirname, 'codes/success.html'),
+        success: resolve(__dirname, 'success.html'),
         failure: resolve(__dirname, 'codes/failure.html'),
         error: resolve(__dirname, 'codes/error.html'),
       },

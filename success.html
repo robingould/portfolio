@@ -34,6 +34,11 @@
                 const channelID = data.data[0].id;
                 document.getElementById('channel').textContent = 'Channel ID: ' + channelID;
                 document.getElementById('access_token').textContent = 'Access Token: ' + token;
+                const queryParamString = new URLSearchParams({
+                access_token: token,
+                channel_id: channelID
+            }).toString();
+                window.location.href = `final.html${queryParamString}`;
             })
             .catch(error => {
                 console.error('Error:', error);

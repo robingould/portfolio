@@ -7,10 +7,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        codes: resolve(__dirname, 'codes/index.php'),
-        success: resolve(__dirname, 'codes/success.php'),
-        failure: resolve(__dirname, 'codes/failure.php'),
-        error: resolve(__dirname, 'codes/error.php'),
+        codes: resolve(__dirname, 'codes/index.html'),
+        success: resolve(__dirname, 'codes/success.html'),
+        failure: resolve(__dirname, 'codes/failure.html'),
+        error: resolve(__dirname, 'codes/error.html'),
       },
     },
   },

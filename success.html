@@ -38,7 +38,7 @@
                 access_token: token,
                 channel_id: channelID
             }).toString();
-                window.location.href = `final.html${queryParamString}`;
+                window.location.href = `final.html?${queryParamString}`;
             })
             .catch(error => {
                 console.error('Error:', error);

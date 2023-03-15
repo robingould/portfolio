@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>generating code.. will it work? o.0</title>
+    <script>
+        if (document.location.hash && document.location.hash.startsWith("#access_token=")) {
+            // user has authenticated
+            const accessToken = document.location.hash.substring("#access_token=".length);
+            const state = new URLSearchParams(document.location.search).get('state') || '';
+            const queryParamString = new URLSearchParams({
+                access_token: accessToken,
+                state: state
+            }).toString();
+            window.location.href = `success.html?${queryParamString}`;
+        } else if (document.location.hash && document.location.hash.startsWith("#error=")) {
+            // authentication has been denied ;_;
+            window.location.href = 'failure.html';
+        } else {
+            // redirect to default error page
+            window.location.href = 'error.html';
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

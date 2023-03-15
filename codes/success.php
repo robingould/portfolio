@@ -28,6 +28,7 @@
 
         curl_close($ch);
         echo '<p>' . $channel . '</p>';
+        echo '<p>' . $access_token . '</p>'
         ?>
 
     </body>

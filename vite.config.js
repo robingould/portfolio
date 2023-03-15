@@ -9,6 +9,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         codes: resolve(__dirname, 'codes/index.html'),
         success: resolve(__dirname, 'success.html'),
+        final: resolve(__dirname, 'final.html'),
         failure: resolve(__dirname, 'codes/failure.html'),
         error: resolve(__dirname, 'codes/error.html'),
       },

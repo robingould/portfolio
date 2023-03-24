@@ -6,7 +6,7 @@ html, body {
     color: white;
     margin:0;
     font-family: Verdana;
-    background-image: src("./assets/cloudynite.gif");
+    background-image: src("./neocities/cloudynite.gif");
     background-repeat: repeat;
           -webkit-animation: slidein 1000s;
           animation: slidein 1000s;
@@ -30,7 +30,7 @@ html, body {
    z-index   : 10000;
    width     : 40px;
    height    : 40px;
-   background: transparent url("./assets/fish.gif") 0 0 no-repeat;
+   background: transparent url("./neocities/fish.gif") 0 0 no-repeat;
  }
  
   

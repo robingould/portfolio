@@ -8,6 +8,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         neoc: resolve(__dirname, 'neoc.html'),
+        
         codes: resolve(__dirname, 'codes/index.html'),
         success: resolve(__dirname, 'success.html'),
         final: resolve(__dirname, 'final.html'),

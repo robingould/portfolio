@@ -3,7 +3,7 @@
    "how to change link color." */
 
 html, body {
-    cursor: url("./neocities/fish.gif");
+    cursor: url("./neocities/fish.gif"), pointer;;
     color: white;
     margin:0;
     font-family: Verdana;
@@ -63,20 +63,11 @@ html, body {
   }
   
   .sheep {
-    height: 100vh;
+    height:100vh;
     z-index: -999;
-    position: relative; 
-  }
-  
-  .sheep img {
-    position: absolute; 
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: repeat-x; 
+    background-image:url('./neocities/sheep.gif');
+    background-repeat: repeat-x;;
     -webkit-animation: bounce 2s ease-in-out infinite alternate;
-    animation: bounce 2s ease-in-out infinite alternate;
   }
   
   @-webkit-keyframes bounce {

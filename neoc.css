@@ -6,7 +6,7 @@ html, body {
     color: white;
     margin:0;
     font-family: Verdana;
-    background-image: url('/cloudynite.gif');
+    background-image: url("cloudynite.gif");
     background-repeat: repeat;
           -webkit-animation: slidein 1000s;
           animation: slidein 1000s;
@@ -30,7 +30,7 @@ html, body {
    z-index   : 10000;
    width     : 40px;
    height    : 40px;
-   background: transparent url('/fish.gif') 0 0 no-repeat;
+   background: transparent url("fish.gif") 0 0 no-repeat;
  }
  
   
@@ -78,7 +78,7 @@ html, body {
   .sheep {
     height:100vh;
     z-index: -999;
-    background-image:url('/sheep.gif');
+    background-image:url("sheep.gif");
     background-repeat: repeat-x;;
     -webkit-animation: bounce 2s ease-in-out infinite alternate;
   }

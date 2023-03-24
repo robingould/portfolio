@@ -3,10 +3,11 @@
    "how to change link color." */
 
 html, body {
+    cursor: url("./neocities/fish.gif");
     color: white;
     margin:0;
     font-family: Verdana;
-    background-image: src("./neocities/cloudynite.gif");
+    background-image: url("./neocities/cloudynite.gif");
     background-repeat: repeat;
           -webkit-animation: slidein 1000s;
           animation: slidein 1000s;
@@ -20,20 +21,6 @@ html, body {
           -webkit-animation-direction: alternate;
           animation-direction: alternate;              
   }
-
-#container {
-    cursor   : none;
- }
- 
- #cursor {
-   position  : absolute;
-   z-index   : 10000;
-   width     : 40px;
-   height    : 40px;
-   background: transparent url("./neocities/fish.gif") 0 0 no-repeat;
- }
- 
-  
   
   @-webkit-keyframes slidein {
   from {background-position: top; background-size:100px; }
@@ -78,16 +65,16 @@ html, body {
   .sheep {
     height: 100vh;
     z-index: -999;
-    position: relative; /* Add position property */
+    position: relative; 
   }
   
   .sheep img {
-    position: absolute; /* Position the img on top of the div */
+    position: absolute; 
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    object-fit: cover; /* Resize the image to fit the container */
+    object-fit: repeat-x; 
     -webkit-animation: bounce 2s ease-in-out infinite alternate;
     animation: bounce 2s ease-in-out infinite alternate;
   }

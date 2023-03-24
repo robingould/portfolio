@@ -76,11 +76,20 @@ html, body {
   }
   
   .sheep {
-    height:100vh;
+    height: 100vh;
     z-index: -999;
-    background-image:url("./assets/sheep.gif");
-    background-repeat: repeat-x;;
+    position: relative; /* Add position property */
+  }
+  
+  .sheep img {
+    position: absolute; /* Position the img on top of the div */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Resize the image to fit the container */
     -webkit-animation: bounce 2s ease-in-out infinite alternate;
+    animation: bounce 2s ease-in-out infinite alternate;
   }
   
   @-webkit-keyframes bounce {

@@ -21,6 +21,32 @@ html, body{
 
 }
 
+.button {
+  cursor: pointer;
+  border: none;
+  color: var(--text-white);
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50px;
+  margin: 4px 2px;
+  transition: 0.4s;
+  box-shadow: 
+    0.3em 0.3em 0 0 var(--text-white),
+    inset 0.3em 0.3em 0 0 var(--text-white);
+}
+
+.button:hover {
+  transform: scale(0.95);
+  color: var(--text-black);
+  box-shadow: 
+      0 0 0 0 var(--text-white),
+      inset 6em 3.5em 0 0 var(--text-white);
+}
+
+
 /* Preloader  */
 .preloader {
   background: #292724;
@@ -56,7 +82,8 @@ html, body{
 .experience{
   position:fixed;
   width: 100vw;
-  height: 100vh；
+  height: 100vh;
+ 
 }
 
 .experience-canvas{
@@ -131,6 +158,7 @@ html, body{
   font-size: 40px;
   font-weight: 500;
   z-index: 5;
+  
 }
 
 .hero{

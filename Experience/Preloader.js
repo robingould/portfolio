@@ -53,6 +53,10 @@ export default class Preloader extends EventEmitter {
             },
             "-=1.5"
           );
+          this.timeline.to(".preloader", {
+            scale: 0,
+            duration: 1,
+          });
         
         
     }

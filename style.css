@@ -35,7 +35,7 @@ html, body{
   z-index: 999999;
   overflow: hidden;
 }
-#loading {
+.loading {
   font-family: 'Questrial', sans-serif;
   color: #e0d8d1;
   font-size: 50px;
@@ -44,6 +44,9 @@ html, body{
 	text-align: center;
 	z-index: 99999999999;
 	display:block;
+  -webkit-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
 }
 
 #wrap {position: absolute; left: 0; right: 0; top: 0; bottom: 0; overflow: hidden; }

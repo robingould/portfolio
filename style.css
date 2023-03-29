@@ -8,7 +8,9 @@
 
 html, body{
   font-family: 'Questrial', sans-serif;
+  background: var(--text-black);
   color: var(--text-white);
+  overflow: hidden;
 }
 
 :root{
@@ -19,6 +21,35 @@ html, body{
 
 }
 
+/* Preloader  */
+.preloader {
+  background: #292724;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  overflow: hidden;
+}
+#loading {
+  font-family: 'Questrial', sans-serif;
+  color: #e0d8d1;
+  font-size: 50px;
+	position: absolute;
+  justify-content: center;
+	text-align: center;
+	z-index: 99999999999;
+	display:block;
+}
+
+#wrap {position: absolute; left: 0; right: 0; top: 0; bottom: 0; overflow: hidden; }
+#wrap canvas {position: absolute; top: 26.5vh; left: 0; width: 500px; height: 500px; -outline: 1px solid #fff;}
+
+/*----experience---*/
 .experience{
   position:fixed;
   width: 100vw;

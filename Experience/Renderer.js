@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { EventEmitter } from "events";
 import Experience from "./Experience.js";
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
@@ -7,13 +8,16 @@ import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { RGBShiftShader } from "three/examples/jsm/shaders/RGBShiftShader.js";
 import GSAP from "gsap";
 
-export default class Renderer{
-    constructor(){
+export default class Renderer extends EventEmitter{
+    constructor() {
+        super();
         this.experience = new Experience();
         this.sizes = this.experience.sizes;
         this.scene = this.experience.scene;
         this.canvas = this.experience.canvas;
+        this.resources = this.experience.resources;
         this.camera = this.experience.camera;
+        this.world = this.experience.world;
 
         this.counter = 0.0;
         this.lerp = {
@@ -21,10 +25,9 @@ export default class Renderer{
             target: 0,
             ease: 0.1,
         };
-
-        this.setRenderer();
-        this.effectAdder();
-        this.onMouseMove();
+            this.setRenderer();
+            this.effectAdder();
+            this.onMouseMove();
     }
 
     setRenderer() {

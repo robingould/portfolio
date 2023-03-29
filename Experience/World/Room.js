@@ -54,6 +54,7 @@ export default class Room{
                     map: this.resources.items.oscilloscope,
                 });
             }
+            
         });
         this.scene.add(this.actualRoom);
         this.actualRoom.position.x = 3;

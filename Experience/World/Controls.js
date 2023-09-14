@@ -145,6 +145,7 @@ export default class Controls{
                     }
                  });
                  this.thirdMoveTimeline.to(this.camera.perspectiveCamera.position, {
+                    x: -2,
                     y: 5.2,
                     z: 7,
                  },"samec"

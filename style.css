@@ -111,8 +111,8 @@ html, body{
   width: 50%;
   padding: 1000px 4%;
   margin: 0;
-  background: #ffffff;
-  background-size: 50%, auto;
+  background: #2d2d2d;
+  background-clip: padding-box;
   border-radius: 25px;
   opacity: 75%;
 }

@@ -172,7 +172,7 @@ export default class Controls{
                  },"samed" 
                  );
                  this.fourthMoveTimeline.to(this.luckycat.rotation, {
-                    x: 0.1,
+                    x: 0,
                     z: 0.2,
                  },  "samed"
                  );

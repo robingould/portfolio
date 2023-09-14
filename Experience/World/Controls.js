@@ -166,7 +166,7 @@ export default class Controls{
                     }
                  });
                  this.fourthMoveTimeline.to(this.luckycat.position, {
-                    x: -5,
+                    x: 2,
                     y: 5,
                  },"samed" 
                  );

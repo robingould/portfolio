@@ -125,7 +125,7 @@ export default class Controls{
                     y: () => {
                         return -0.3;
                     },
-                    z: 2.56,
+                    z: 2.5,
                  },"sameb"
                  );
                  this.secondMoveTimeline.to(this.camera.perspectiveCamera.rotation, {
@@ -146,7 +146,7 @@ export default class Controls{
                  });
                  this.thirdMoveTimeline.to(this.camera.perspectiveCamera.position, {
                     y: 5.2,
-                    z: 7,
+                    z: 9,
                  },"samec"
                  );
                  this.thirdMoveTimeline.to(this.camera.perspectiveCamera.rotation, {

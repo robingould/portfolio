@@ -146,7 +146,7 @@ export default class Controls{
                  });
                  this.thirdMoveTimeline.to(this.camera.perspectiveCamera.position, {
                     y: 5.2,
-                    z: 5,
+                    z: 7,
                  },"samec"
                  );
                  this.thirdMoveTimeline.to(this.camera.perspectiveCamera.rotation, {
@@ -166,7 +166,7 @@ export default class Controls{
                     }
                  });
                  this.fourthMoveTimeline.to(this.luckycat.position, {
-                    x: -4,
+                    x: -5,
                     y: 4.8,
                     z: 1.8
                  },"samed" 

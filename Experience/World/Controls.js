@@ -121,7 +121,7 @@ export default class Controls{
                     }
                  });
                  this.secondMoveTimeline.to(this.camera.perspectiveCamera.position, {
-                    x: 4,
+                    x: 4.2,
                     y: () => {
                         return -0.3;
                     },
@@ -166,7 +166,7 @@ export default class Controls{
                     }
                  });
                  this.fourthMoveTimeline.to(this.luckycat.position, {
-                    x: -2.6,
+                    x: -2,
                     y: 5,
                  },"samed" 
                  );

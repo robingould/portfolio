@@ -168,7 +168,7 @@ export default class Controls{
                  this.fourthMoveTimeline.to(this.luckycat.position, {
                     x: -5,
                     y: 4.8,
-                    z: 2
+                    z: 2.1
                  },"samed" 
                  );
                  this.fourthMoveTimeline.to(this.luckycat.rotation, {

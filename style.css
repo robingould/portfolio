@@ -112,6 +112,7 @@ html, body{
   padding: 1000px 4%;
   margin: 0;
   background: #ffffff;
+  background-size: 50%, auto;
   border-radius: 25px;
   opacity: 75%;
 }

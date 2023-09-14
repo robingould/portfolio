@@ -125,11 +125,11 @@ export default class Controls{
                     y: () => {
                         return -0.3;
                     },
-                    z: 2,
+                    z: 2.3,
                  },"sameb"
                  );
                  this.secondMoveTimeline.to(this.camera.perspectiveCamera.rotation, {
-                    x: -0.27,
+                    x: -0.5,
                     y: -0.5,
                     z: -0.16,
                  }, "sameb"

@@ -12,6 +12,7 @@ export default defineConfig({
         final: resolve(__dirname, 'final.html'),
         failure: resolve(__dirname, 'codes/failure.html'),
         error: resolve(__dirname, 'codes/error.html'),
+        data_temp: resolve(__dirname, 'collisions1601.geojson'),
       },
     },
   },

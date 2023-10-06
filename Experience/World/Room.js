@@ -35,7 +35,8 @@ export default class Room{
 
             if(child.name === "screen"){
                 child.material = new THREE.MeshBasicMaterial({
-                    map: this.resources.items.peguig,
+                    //map: this.resources.items.peguig,
+                    
                 });
             }
 

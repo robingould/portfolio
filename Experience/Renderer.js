@@ -33,7 +33,7 @@ export default class Renderer extends EventEmitter{
     setRenderer() {
         this.renderer = new THREE.WebGLRenderer({
             canvas: this.canvas,
-            antialias: true,
+            antialias: false,
         });
 
         this.renderer.physicallyCorrectLights = true;

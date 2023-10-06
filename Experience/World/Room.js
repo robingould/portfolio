@@ -42,17 +42,17 @@ export default class Room{
 
             if(child.name === "screen2"){
                 child.material = new THREE.MeshBasicMaterial({
-                    map: this.resources.items.crtbars,
+                    //map: this.resources.items.crtbars,
                 });
             }
             if(child.name === "screen3"){
                 child.material = new THREE.MeshBasicMaterial({
-                    map: this.resources.items.crtbars,
+                    //map: this.resources.items.crtbars,
                 });
             }
             if(child.name === "oscilloscope"){
                 child.material = new THREE.MeshBasicMaterial({
-                    map: this.resources.items.oscilloscope,
+                    //map: this.resources.items.oscilloscope,
                 });
             }
             

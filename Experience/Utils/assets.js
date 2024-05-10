@@ -5,14 +5,19 @@ export default [
         path: "/models/oldtv.glb",
     },
     {
-        name: "oscilloscope",
+        name: "paintvideo",
         type: "videoTexture",
-        path: "/textures/osci.mp4",
+        path: "/textures/paintvideo.mp4",
     },
     {
         name: "crtbars",
         type: "videoTexture",
         path: "/textures/crtbars.mp4",
+    },
+    {
+        name: "crab_vid",
+        type: "videoTexture",
+        path: "/textures/crab_vid.mp4",
     },
     {
         name: "peguig",

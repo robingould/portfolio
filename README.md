@@ -1,5 +1,5 @@
 TODO: 
-- rewrite with typescript, pref nextjs probably
+- rewrite with typescript
 - update with tailwind 
 - swap asscroll for lenis
 - dont use arch linux user I mean singleton pattern uhh

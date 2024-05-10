@@ -1,5 +1,9 @@
+Website works great on Windows + Linux
+Sucks ASS on MacOS and mobile. Large 3d model + large videos + poor practices. In 2022 I didn't even KNOW what React was.
+
+
 TODO: 
-- rewrite with typescript
+- rewrite with react+typescript
 - update with tailwind 
 - swap asscroll for lenis
 - dont use arch linux user I mean singleton pattern uhh

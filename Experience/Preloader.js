@@ -20,25 +20,25 @@ export default class Preloader extends EventEmitter {
 
     playIntro() {
         this.timeline = new GSAP.timeline();
-        this.timeline.to(".wrap", {
-            x: "-10%",
-            duration: 1,
-          });
+        //this.timeline.to(".wrap", {
+         //   x: "-10%",
+         //   duration: 1,
+         // });
           this.timeline.to(".preloader", {
             opacity: 0,
             duration: 3,
           });
-          this.timeline.fromTo(
-            "nav",
-            {
-              opacity: 0,
-            },
-            {
-              opacity: 1,
-              duration: 1,
-            },
-            "-=2"
-          );
+          //this.timeline.fromTo(
+         //   "nav",
+          //  {
+          //    opacity: 0,
+          //  },
+           // {
+          //    opacity: 1,
+           //   duration: 1,
+           // },
+          //  "-=2"
+         // );
           
           this.timeline.fromTo(
             ".experience",

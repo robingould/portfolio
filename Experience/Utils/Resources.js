@@ -4,6 +4,7 @@ import { EventEmitter } from "events";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js"
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js"
 import Experience from "../Experience.js";
+import { LinearEncoding } from 'three';
 
 export default class Resources extends EventEmitter {
     constructor(assets) {
@@ -53,7 +54,7 @@ export default class Resources extends EventEmitter {
                 //this.videoTexture[asset.name].minFilter = THREE.NearestFilter;
                 //this.videoTexture[asset.name].magFilter = THREE.NearestFilter;
                 this.videoTexture[asset.name].generateMipmaps = false;
-                this.videoTexture[asset.name].encoding = THREE.sRGBEncoding;
+                this.videoTexture[asset.name].encoding = LinearEncoding;
                 
                 this.singleAssetLoaded(asset, this.videoTexture[asset.name]);
             }

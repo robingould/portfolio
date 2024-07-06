@@ -200,6 +200,14 @@ html, body{
 .hero-second-subheading{
   font-size: 36px;
 }
+.hero-second-description{
+  font-size: 20px;
+  float: left;
+  margin-top: 41rem;
+  text-decoration: none;
+  color: inherit;
+}
+
 
 @media (max-width: 968px) {
   .section{

@@ -7,9 +7,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        yap: resolve(__dirname, '/yap/'),
-        about: resolve(__dirname, '/about/'),
-        projects: resolve(__dirname, '/projects/'),
+        yap: resolve(__dirname, 'pages/yap/index.html'),
+        about: resolve(__dirname, 'about/index.html'),
+        projects: resolve(__dirname, 'projects/index.html'),
         codes: resolve(__dirname, 'codes/index.html'),
         success: resolve(__dirname, 'success.html'),
         final: resolve(__dirname, 'final.html'),

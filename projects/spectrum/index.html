@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectrum To Hex</title>
+    <link href="/index.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="index.css"/>
+  </head>
+  <body>
+    <div class="container wrapper">
+    <div class="header">
+        <h1 class="title"><a href="/">Convert Spectrum to Hex</a></h1>
+        <div class="slidecontainer">
+            <input type="range" min="380" max="780" value="600" class="slider" id="myRange">
+            <input type="number" id="demo" name="fname" value="">
+            <input type="text" id="hex" name="hex" value="">
+        </div>
+        <script src="spectrum.ts"></script>
+        <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            var hexOut = document.getElementById("hex");
+            output.value = slider.value;
+            let hex = spectrum(600);
+
+
+            slider.oninput = function() {
+            output.value = this.value;
+            let x = spectrum(output.value);
+            hexOut.value = x;
+        }
+        </script>
+        
+
+  </body>
+</div>
+</html>

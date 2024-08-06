@@ -8,23 +8,24 @@ function spectrum(wavelength: number) {
 
     let red: number, green: number, blue: number;
     let intensity: number;
+    console.log(wavelength);
 
-    if (wavelength >= 380 && wavelength <= 400) {
+    if ((wavelength >= 380) && (wavelength < 400)) {
         red = -1 * (wavelength - 400) / (440 - 380);
         green = 0;
         blue = 1;
     }
-    else if (wavelength >= 490 && wavelength <= 510) {
+    else if ((wavelength >= 490) && (wavelength < 510)) {
         red = 0;
         green = 1
         blue = -1 * (wavelength - 510) / (510 - 490);
     }
-    else if (wavelength >= 580 && wavelength <= 645) {
+    else if ((wavelength >= 580) && (wavelength < 645)) {
         red = 0;
         green = -1 * (wavelength - 645) / (645 - 580)
         blue = 0;
     }
-    else if (wavelength >= 645 && wavelength <= 780) {
+    else if ((wavelength >= 645) && (wavelength < 781)) {
         red = 1;
         green = 0
         blue = 0;
@@ -42,9 +43,10 @@ function spectrum(wavelength: number) {
     } else {
         intensity = 1;
     };
+    console.log(red);
     return [
-            Math.floor(MAX * Math.pow(intensity * red, GAMMA)),
-            Math.floor(MAX * Math.pow(intensity * green, GAMMA)),
-            Math.floor(MAX * Math.pow(intensity * blue, GAMMA))
+            Math.round(MAX * Math.pow(intensity * red, GAMMA)),
+            Math.round(MAX * Math.pow(intensity * green, GAMMA)),
+            Math.round(MAX * Math.pow(intensity * blue, GAMMA))
         ];
 }

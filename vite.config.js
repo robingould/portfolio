@@ -16,7 +16,8 @@ export default defineConfig({
         final: resolve(__dirname, 'final.html'),
         failure: resolve(__dirname, 'codes/failure.html'),
         error: resolve(__dirname, 'codes/error.html'),
-        music: resolve(__dirname, 'm.html')
+        music: resolve(__dirname, 'm.html'),
+        spectrum: resolve(__dirname, 'projects/spectrum/index.html')
       },
     },
   },

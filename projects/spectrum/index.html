@@ -4,31 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spectrum To Hex</title>
-    <link href="/index.css" rel="stylesheet" type="text/css" media="all">
+    <link href="index.css" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="index.css"/>
   </head>
   <body>
     <div class="container wrapper">
     <div class="header">
-        <h1 class="title"><a href="/">Convert Spectrum to Hex</a></h1>
+        <h1 class="title"><a href="/home/">Convert Spectrum to Hex</a></h1>
         <div class="slidecontainer">
             <input type="range" min="380" max="780" value="600" class="slider" id="myRange">
-            <input type="number" id="demo" name="fname" value="">
-            <input type="text" id="hex" name="hex" value="">
         </div>
+        <div class="label-container">
+            wavelength: <input type="text" id="demo" name="fname" value="">
+            hex:
+            <input type="text" id="hex" name="hex" value="">
+            rgb: 
+            <input type="text" id="rgb" name="rgb" value="">
+        </div>
+        <div class="square"></div>
         <script src="spectrum.ts"></script>
         <script>
             var slider = document.getElementById("myRange");
             var output = document.getElementById("demo");
             var hexOut = document.getElementById("hex");
-            output.value = slider.value;
+            var rgbOut = document.getElementById("rgb");
+            const square = document.querySelector(".square");
+            output.value = String(slider.value + "nm");
             let hex = spectrum(600);
 
 
             slider.oninput = function() {
-            output.value = this.value;
-            let x = spectrum(output.value);
-            hexOut.value = x;
+              output.value = String(this.value + "nm");
+              let sOut = spectrum(this.value);
+              color_hex = `rgb(${sOut[0]} ${sOut[1]} ${sOut[2]})`;
+              rgbOut.value = sOut;
+              var b = sOut.map(function(x) {
+                x = parseInt(x).toString(16);
+                return (x.length==1) ? "0" +x : x;
+              })
+              hex_val = "#"+b.join("");
+              hexOut.value = hex_val;
+              square.style.setProperty("background-color", color_hex);
         }
         </script>
         

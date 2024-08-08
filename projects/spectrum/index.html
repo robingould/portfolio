@@ -22,7 +22,7 @@
             <input type="text" id="rgb" name="rgb" value="">
         </div>
         <div class="square"></div>
-        <script src="spectrum.ts"></script>
+        <script src="/projects/spectrum/spectrum.ts"></script>
         <script>
             var slider = document.getElementById("myRange");
             var output = document.getElementById("demo");
@@ -46,6 +46,19 @@
               hexOut.value = hex_val;
               square.style.setProperty("background-color", color_hex);
         }
+            function myFunction() { // Get the text field
+              var copyText = document.getElementById("myInput");
+
+              // Select the text field
+              copyText.select();
+              copyText.setSelectionRange(0, 99999); // For mobile devices
+
+              // Copy the text inside the text field
+              navigator.clipboard.writeText(copyText.value);
+
+              // Alert the copied text
+              alert("Copied the text: " + copyText.value);
+            } 
         </script>
         
 
